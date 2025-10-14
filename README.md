@@ -1,2 +1,2 @@
 # Calculator
-Easy Calculator that i made
+Easy Calculator that I made
