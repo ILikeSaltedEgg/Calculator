@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="calculator-wrapper">
+            <div class="calculator-header">
+                <div class="header-left">
+                    <h1 class="app-title">Calculator</h1>
+                    <div class="mode-indicator">BASIC MODE</div>
+                </div>
+                <div class="header-controls">
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="icon-btn history-toggle" title="History">
+                        <i class="fas fa-history"></i>
+                        <span class="badge">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="calculator-container">
+                    <div class="calculator">
+                        <div class="display">
+                            <div class="expression-display"></div>
+                            <div class="previous-operand"></div>
+                            <div class="current-operand">0</div>
+                        </div>
+                        
+                        <div class="scientific-buttons">
+                            <div class="button scientific" data-action="sin" title="Sine">sin</div>
+                            <div class="button scientific" data-action="cos" title="Cosine">cos</div>
+                            <div class="button scientific" data-action="tan" title="Tangent">tan</div>
+                            <div class="button scientific" data-action="asin" title="Arc Sine">sin⁻¹</div>
+                            <div class="button scientific" data-action="acos" title="Arc Cosine">cos⁻¹</div>
+                            
+                            <div class="button scientific" data-action="atan" title="Arc Tangent">tan⁻¹</div>
+                            <div class="button scientific" data-action="log" title="Logarithm base 10">log</div>
+                            <div class="button scientific" data-action="ln" title="Natural Logarithm">ln</div>
+                            <div class="button scientific" data-action="exp" title="e^x">e^x</div>
+                            <div class="button scientific" data-action="power" title="Power">x^y</div>
+                            
+                            <div class="button scientific" data-action="sqrt" title="Square Root">√</div>
+                            <div class="button scientific" data-action="cbrt" title="Cube Root">∛</div>
+                            <div class="button scientific" data-action="square" title="Square">x²</div>
+                            <div class="button scientific" data-action="cube" title="Cube">x³</div>
+                            <div class="button scientific" data-action="reciprocal" title="Reciprocal">1/x</div>
+                            
+                            <div class="button scientific" data-action="pi" title="Pi">π</div>
+                            <div class="button scientific" data-action="e" title="Euler's number">e</div>
+                            <div class="button scientific" data-action="factorial" title="Factorial">x!</div>
+                            <div class="button scientific" data-action="abs" title="Absolute Value">|x|</div>
+                            <div class="button scientific" data-action="rand" title="Random">rand</div>
+                        </div>
+                        
+                        <div class="buttons-grid">
+                            <div class="button light-gray" data-action="clear">AC</div>
+                            <div class="button light-gray" data-action="backspace" title="Backspace"><i class="fas fa-backspace"></i></div>
+                            <div class="button light-gray" data-action="percentage">%</div>
+                            <div class="button operation" data-action="divide">÷</div>
+                
+                            <div class="button dark-gray" data-number="7">7</div>
+                            <div class="button dark-gray" data-number="8">8</div>
+                            <div class="button dark-gray" data-number="9">9</div>
+                            <div class="button operation" data-action="multiply">×</div>
+                            
+                            <div class="button dark-gray" data-number="4">4</div>
+                            <div class="button dark-gray" data-number="5">5</div>
+                            <div class="button dark-gray" data-number="6">6</div>
+                            <div class="button operation" data-action="subtract">−</div>
+                            
+                            <div class="button dark-gray" data-number="1">1</div>
+                            <div class="button dark-gray" data-number="2">2</div>
+                            <div class="button dark-gray" data-number="3">3</div>
+                            <div class="button operation" data-action="add">+</div>
+                            
+                            <div class="button dark-gray" data-action="toggle-sign">+/−</div>
+                            <div class="button dark-gray" data-number="0">0</div>
+                            <div class="button dark-gray" data-action="decimal">.</div>
+                            <div class="button operation equals" data-action="calculate">=</div>
+                        </div>
+                    </div>
+                    
+                    <button class="toggle-scientific">
+                        <i class="fas fa-calculator"></i>
+                        <span>Scientific Functions</span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </button>
+                </div>
+
+                <div class="history-panel">
+                    <div class="history-header">
+                        <h2>History</h2>
+                        <button class="clear-history-btn" title="Clear History">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="history-list">
+                        <div class="empty-history">
+                            <i class="fas fa-clock-rotate-left"></i>
+                            <p>No calculations yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
