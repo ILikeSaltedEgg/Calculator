@@ -259,13 +259,13 @@ class Calculator {
     formatResult(num) {
         if (!isFinite(num)) return 'Error';
         
-        // Round to avoid floating point errors
+        
         const rounded = Math.round(num * 1e10) / 1e10;
         
-        // Convert to string and limit decimal places
+        
         let str = rounded.toString();
         
-        // Handle scientific notation for very large/small numbers
+        
         if (Math.abs(rounded) > 1e15 || (Math.abs(rounded) < 1e-6 && rounded !== 0)) {
             str = rounded.toExponential(6);
         }
@@ -569,3 +569,4 @@ class Calculator {
 
 
 const calculator = new Calculator();
+
