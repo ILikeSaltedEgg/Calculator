@@ -1,4 +1,3 @@
-// Professional Calculator with History and Theme Support
 class Calculator {
     constructor() {
         this.previousOperandElement = document.querySelector('.previous-operand');
@@ -107,10 +106,10 @@ class Calculator {
                 return;
         }
         
-        // Format result
+        
         computation = this.formatResult(computation);
         
-        // Add to history
+        
         this.addToHistory(fullExpression, computation);
         
         this.currentOperand = computation.toString();
@@ -567,5 +566,6 @@ class Calculator {
         });
     }
 }
+
 
 const calculator = new Calculator();
